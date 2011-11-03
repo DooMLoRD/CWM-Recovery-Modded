@@ -1,0 +1,97 @@
+# Prebuilt kl keymaps
+/system/usr/keylayout/atdaemon.kl
+/system/usr/keylayout/AVRCP.kl
+/system/usr/keylayout/keypad-game-zeus.kl
+/system/usr/keylayout/keypad-phone-zeus.kl
+/system/usr/keylayout/keypad-zeus.kl
+/system/usr/keylayout/qwerty.kl
+/system/usr/keylayout/simple_remote.kl
+/system/usr/keychars/qwerty.kcm.bin
+/system/usr/keychars/qwerty2.kcm.bin
+/system/usr/keychars/keypad-zeus.kcm.bin
+/system/bin/lidswitchd
+
+## RIL related stuff 
+/system/bin/port-bridge
+/system/bin/qmuxd
+/system/lib/libril.so
+/system/lib/libauth.so
+/system/lib/libcm.so
+/system/lib/libdiag.so
+/system/lib/libdll.so
+/system/lib/libdsm.so
+/system/lib/libdss.so
+/system/lib/libgsdi_exp.so
+/system/lib/libgstk_exp.so
+/system/lib/libmmgsdilib.so
+/system/lib/libnv.so
+/system/lib/liboem_rapi.so
+/system/lib/liboncrpc.so
+/system/lib/libpbmlib.so
+/system/lib/libqmi.so
+/system/lib/libqueue.so
+/system/lib/libuim.so
+/system/lib/libreference-ril.so
+/system/lib/libril-qc-1.so
+/system/lib/libwms.so
+/system/lib/libwmsts.so
+/system/lib/libdsi_netctrl.so
+/system/lib/libdsutils.so
+/system/lib/libidl.so
+/system/lib/libnetmgr.so
+/system/lib/libqdp.so
+/system/bin/netmgrd
+
+## Camera proprietaries
+/system/etc/permissions/android.hardware.camera.front.xml
+/system/lib/liboemcamera.so
+/system/lib/libmmjpeg.so
+/system/lib/libmmipl.so 
+/system/lib/libcamera.so
+
+## FIRMWARE
+/system/etc/firmware/bcm4329.hcd
+/system/etc/firmware/fw_bcm4329.bin
+/system/etc/firmware/fw_bcm4329_apsta.bin
+/system/etc/firmware/vidc_720p_command_control.fw
+/system/etc/firmware/vidc_720p_h263_dec_mc.fw
+/system/etc/firmware/vidc_720p_h264_dec_mc.fw
+/system/etc/firmware/vidc_720p_h264_enc_mc.fw
+/system/etc/firmware/vidc_720p_mp4_dec_mc.fw
+/system/etc/firmware/vidc_720p_mp4_enc_mc.fw
+/system/etc/firmware/vidc_720p_vc1_dec_mc.fw
+/system/etc/firmware/yamato_pfp.fw
+/system/etc/firmware/yamato_pm4.fw
+
+## WIFI & BT BCM
+/system/etc/wifi/calibration
+/system/etc/wifi/wpa_supplicant.conf
+/system/bin/brcm_patchram_plus
+
+## Other libraries and proprietary binaries
+/system/lib/libaudioalsa.so
+/system/lib/libaudioalsa.so
+/system/etc/sensors.conf
+/system/etc/vold.fstab
+/system/lib/hw/sensors.default.so
+/system/bin/akmd8975
+/system/bin/chargemon
+/system/lib/libmiscta.so
+
+## Adreno 200 files
+/system/lib/libgsl.so/libgsl.so
+/system/lib/egl/libGLESv1_CM_adreno200.so
+/system/lib/egl/libq3dtools_adreno200.so
+/system/lib/egl/libEGL_adreno200.so
+/system/lib/egl/libGLESv2_adreno200.so
+
+#PS Deps 
+/system/etc/permissions/com.playstation.playstationcertified.xml
+/system/etc/permissions/com.sonyericsson.android.xperiaplaycertified.xml
+/system/etc/permissions/com.sony.android.playstationcertified.xml
+/system/framework/com.playstation.playstationcertified.jar
+/system/framework/playstationcertified.jar
+/system/framework/xperiaplaycertified.jar
+/system/app/com.sonyericsson.androidapp.storefront.apk
+/system/app/preinstalledservice.apk
+/system/lib/librsasigner.so
