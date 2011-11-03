@@ -504,12 +504,12 @@ get_menu_selection(char** headers, char** items, int menu_only,
             if (wrap_count == 3) {
                 wrap_count = 0;
                 if (ui_get_showing_back_button()) {
-                    ui_print("Back menu button disabled.\n");
-                    ui_set_showing_back_button(0);
+                    //ui_print("Back menu button disabled.\n");
+                    //ui_set_showing_back_button(0);
                 }
                 else {
-                    ui_print("Back menu button enabled.\n");
-                    ui_set_showing_back_button(1);
+                    //ui_print("Back menu button enabled.\n");
+                    //ui_set_showing_back_button(1);
                 }
             }
         }
@@ -659,20 +659,11 @@ wipe_data(int confirm) {
         }
 
         char* items[] = { " No",
-                          " No",
-                          " No",
-                          " No",
-                          " No",
-                          " No",
-                          " No",
-                          " Yes -- delete all user data",   // [7]
-                          " No",
-                          " No",
-                          " No",
+                          " Yes -- delete all user data",   // [1]
                           NULL };
 
         int chosen_item = get_menu_selection(title_headers, items, 1, 0);
-        if (chosen_item != 7) {
+        if (chosen_item != 1) {
             return;
         }
     }
