@@ -1007,6 +1007,11 @@ void show_advanced_menu()
                                              "4096M",
                                              NULL };
 
+                static char* ext_fs[] = { "ext2",
+                                          "ext3",
+                                          "ext4",
+                                          NULL };
+
                 static char* swap_sizes[] = { "0M",
                                               "32M",
                                               "64M",
@@ -1015,10 +1020,15 @@ void show_advanced_menu()
                                               NULL };
 
                 static char* ext_headers[] = { "Ext Size", "", NULL };
+                static char* ext_fs_headers[] = { "Ext File System", "", NULL };
                 static char* swap_headers[] = { "Swap Size", "", NULL };
 
                 int ext_size = get_menu_selection(ext_headers, ext_sizes, 0, 0);
                 if (ext_size == GO_BACK)
+                    continue;
+
+                int ext_fs_selected = get_menu_selection(ext_fs_headers, ext_fs, 0, 0);
+                if (ext_fs_selected == GO_BACK)
                     continue;
 
                 int swap_size = get_menu_selection(swap_headers, swap_sizes, 0, 0);
@@ -1032,7 +1042,7 @@ void show_advanced_menu()
                 sddevice[strlen("/dev/block/mmcblkX")] = NULL;
                 char cmd[PATH_MAX];
                 setenv("SDPATH", sddevice, 1);
-                sprintf(cmd, "sdparted -es %s -ss %s -efs ext3 -s", ext_sizes[ext_size], swap_sizes[swap_size]);
+                sprintf(cmd, "sdparted -es %s -ss %s -efs %s -s", ext_sizes[ext_size], swap_sizes[swap_size], ext_fs[ext_fs_selected]);
                 ui_print("Partitioning SD Card... please wait...\n");
                 if (0 == __system(cmd))
                     ui_print("Done!\n");
