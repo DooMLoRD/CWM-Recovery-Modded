@@ -651,7 +651,13 @@ wipe_data(int confirm) {
         static char** title_headers = NULL;
 
         if (title_headers == NULL) {
-            char* headers[] = { "Confirm wipe of all user data?",
+            char* headers[] = { "Confirm wipe of ALL user data?",
+                                "following partitions will be WIPED:",
+                                "   /data",
+				"   /cache",
+				"   /sd-ext",
+				"   /sdcard/.android_secure",
+                                "",
                                 "  THIS CAN NOT BE UNDONE.",
                                 "",
                                 NULL };
@@ -659,7 +665,7 @@ wipe_data(int confirm) {
         }
 
         char* items[] = { " No",
-                          " Yes -- delete all user data",   // [1]
+                          " Yes -- delete ALL user data",   // [1]
                           NULL };
 
         int chosen_item = get_menu_selection(title_headers, items, 1, 0);
@@ -668,7 +674,7 @@ wipe_data(int confirm) {
         }
     }
 
-    ui_print("\n-- Wiping data...\n");
+    ui_print("\n-- Performing Factory Reset...\n");
     device_wipe_data();
     erase_volume("/data");
     erase_volume("/cache");
@@ -677,7 +683,7 @@ wipe_data(int confirm) {
     }
     erase_volume("/sd-ext");
     erase_volume("/sdcard/.android_secure");
-    ui_print("Data wipe complete.\n");
+    ui_print("Factory Reset complete.\n");
 }
 
 static void

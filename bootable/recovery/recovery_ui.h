@@ -67,10 +67,10 @@ int device_wipe_data();
 #define GO_BACK             -5
 
 #define ITEM_REBOOT          0
-#define ITEM_APPLY_SDCARD    1
-#define ITEM_WIPE_DATA       2
-#define ITEM_WIPE_CACHE      3
-#define ITEM_INSTALL_ZIP     4
+#define ITEM_INSTALL_ZIP     1
+#define ITEM_APPLY_SDCARD    2
+#define ITEM_WIPE_DATA       3
+#define ITEM_WIPE_CACHE      4
 #define ITEM_NANDROID        5
 #define ITEM_PARTITION       6
 #define ITEM_ADVANCED        7
