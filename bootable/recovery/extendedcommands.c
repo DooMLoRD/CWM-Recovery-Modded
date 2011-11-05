@@ -999,7 +999,32 @@ void show_advanced_menu()
             }
             case 6:
             {
-                static char* ext_sizes[] = { "128M",
+
+/*
+		char* printline;
+		FILE* f;
+		
+		//get device info
+		__system("parted /dev/block/mmcblk0 print > /tmp/parttableinfo1.log");
+
+		ui_print("Current partition table info\n\n");
+
+		ui_print("device:\n");
+		f = fopen("/tmp/parttableinfo1.log", "r");
+		if(f != NULL)
+		{
+			while(!feof(f)) {
+			fgets(printline,80,f);
+			ui_print("%s\n",printline);
+			}
+			fclose(f);
+		}
+		printline="";
+*/
+                if (confirm_selection("Confirm: SDCARD will be wiped!!", "Yes - Continue with SDCARD Partitioning"))
+                {
+                
+		static char* ext_sizes[] = { "128M",
                                              "256M",
                                              "512M",
                                              "1024M",
@@ -1048,6 +1073,9 @@ void show_advanced_menu()
                     ui_print("Done!\n");
                 else
                     ui_print("An error occured while partitioning your SD Card. Please see /tmp/recovery.log for more details.\n");
+
+		}
+
                 break;
             }
             case 7:

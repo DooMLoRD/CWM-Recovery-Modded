@@ -27,7 +27,7 @@ char* MENU_HEADERS[] = { "Xperia Arc [v02]",
 
 char* MENU_ITEMS[] = { "reboot system now",
                        "install zip from sdcard",
-                       "install /sdcard/update.zip",
+                       "apply /sdcard/update.zip",
                        "factory reset",
                        "wipe cache partition",
                        "backup and restore",
