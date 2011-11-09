@@ -1,0 +1,12 @@
+#!/system/xbin/ash
+
+# copy reg_code to data wifi if it doesnt exists...
+if [ ! -f /data/misc/wifi/reg_code ]; then
+
+  cp /system/etc/wifi/reg_code /data/misc/wifi/reg_code
+
+  chown wifi.wifi /data/misc/wifi/reg_code
+  chmod 666 /data/misc/wifi/reg_code
+
+fi
+

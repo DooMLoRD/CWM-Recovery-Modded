@@ -1,0 +1,12 @@
+#!/system/xbin/ash
+
+# copy dnsmasq.conf to data wifi if it doesnt exists...
+if [ ! -f /data/misc/wifi/hostapd.conf ]; then
+
+  cp /system/etc/wifi/softap/hostapd.conf /data/misc/wifi/hostapd.conf
+
+  chown wifi.wifi /data/misc/wifi/hostapd.conf
+  chmod 666 /data/misc/wifi/hostapd.conf
+
+fi
+

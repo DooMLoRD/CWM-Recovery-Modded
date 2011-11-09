@@ -1,0 +1,11 @@
+#!/system/bin/sh
+#
+#copy wifi modules from kernel to system
+
+mount -o rw,remount -t yaffs2 /dev/block/mtdblock0 /system
+mkdir -p /system/lib/modules/
+cp /modules/*.ko /system/lib/modules >/dev/null 2>&1
+mount -o ro,remount -t yaffs2 /dev/block/mtdblock0 /system
+
+exit 0
+

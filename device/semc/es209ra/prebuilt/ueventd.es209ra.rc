@@ -1,0 +1,38 @@
+# gpu driver for adreno200 is globally accessible
+/dev/kgsl*                 0666   system graphics
+/dev/hw3d 		   0660	  system graphics
+/dev/msm_rotator 	0660 system graphics
+/dev/pmem_gpu* 		0666 system graphics
+# audio devices
+/dev/msm_pcm_dec* 	0666 system audio
+/dev/snd/controlC0* 	0666 system audio
+/dev/msm_aac* 		0660 system audio
+/dev/amrnb* 		0660 system audio
+/dev/amrwb* 		0660 system audio
+/dev/msm_qcelp* 	0660 system audio
+/dev/evrc* 		0660 system audio
+/dev/msm_voicememo* 	0660 system audio
+/dev/msm_voice 		0660 system audio
+/dev/pmem_smipool   0660 system audio
+/dev/cpu_dma_latency 0660 system system
+# sensors
+/dev/es209ra_proximity 	0660 system system
+/dev/akm8973_aot        0664 compass system
+# camera sensor
+/dev/semc_imx046_camera 0660 system system
+/dev/pmem_swiqi           0660   system     graphics
+/dev/bma250               0640   compass    system
+/dev/msm_vidc_dec         0660   system     audio
+/dev/msm_vidc_enc         0660   system     audio
+/dev/msm_vidc_reg         0660   system     audio
+# radio devices
+/dev/oncrpc/30000000*		   0660   radio radio
+/dev/oncrpc/30000003*		   0660   radio radio
+/dev/oncrpc/3000000e*		   0660   radio system
+/dev/oncrpc/30000012*		   0660   radio radio
+/dev/oncrpc/30000016*		   0660   radio radio
+/dev/oncrpc/30000017*		   0660    radio   radio
+/dev/oncrpc/30000019*		   0660   radio radio
+/dev/oncrpc/3000003c*		   0660   radio radio
+/dev/oncrpc/3000006b*		   0660   radio system
+
