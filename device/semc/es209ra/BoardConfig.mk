@@ -36,7 +36,7 @@ BOARD_USE_SCREENCAP := true
 BOARD_CUSTOM_BOOTIMG_MK := device/semc/es209ra/custombootimg.mk
 TARGET_RECOVERY_PRE_COMMAND := "touch /cache/recovery/boot;sync;"
 
-BOARD_HAS_SMALL_RECOVERY := true
+# BOARD_HAS_SMALL_RECOVERY := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_USES_RECOVERY_CHARGEMODE := false
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/semc/es209ra/recovery/recovery_ui.c

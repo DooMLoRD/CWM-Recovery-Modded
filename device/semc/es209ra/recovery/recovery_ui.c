@@ -20,13 +20,16 @@
 #include "common.h"
 #include "extendedcommands.h"
 
-char* MENU_HEADERS[] = { NULL };
+//char* MENU_HEADERS[] = { NULL };
+char* MENU_HEADERS[] = { "Xperia X10 [v02]",
+			 "",
+			 NULL };
 
 char* MENU_ITEMS[] = { "reboot system now",
-                       "apply update from sdcard",
-                       "wipe data/factory reset",
-                       "wipe cache partition",
                        "install zip from sdcard",
+                       "apply /sdcard/update.zip",
+                       "factory reset",
+                       "wipe cache partition",
                        "backup and restore",
                        "mounts and storage",
                        "advanced",
