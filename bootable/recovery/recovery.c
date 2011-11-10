@@ -705,9 +705,40 @@ prompt_and_wait() {
 
         switch (chosen_item) {
             case ITEM_REBOOT:
-                poweroff=0;
-                return;
+		{
 
+		    static char* headers[] = {  "Reboot Options",
+				                "",
+				                NULL
+		    };
+
+		    static char* list[] = { "reboot system now",
+				            "reboot recovery",
+				            "reboot into fastboot mode",
+				            NULL
+		    };
+
+		    int chosen_item = get_menu_selection(headers, list, 0, 0);
+		    switch (chosen_item)
+		    {
+			case 0:
+			    {
+				poweroff=0;
+				return;
+			    }
+			case 1:
+			    {
+				__system("reboot recovery");
+				break;
+			    }
+			case 2:
+			    {
+				__system("reboot bootloader");
+				break;
+			    }
+		    }
+		    break;
+		}
             case ITEM_WIPE_DATA:
                 wipe_data(ui_text_visible());
                 if (!ui_text_visible()) return;

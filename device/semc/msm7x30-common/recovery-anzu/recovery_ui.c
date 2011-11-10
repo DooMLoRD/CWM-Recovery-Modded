@@ -21,11 +21,11 @@
 #include "extendedcommands.h"
 
 //char* MENU_HEADERS[] = { NULL };
-char* MENU_HEADERS[] = { "Xperia Arc [v02]",
+char* MENU_HEADERS[] = { "Xperia Arc [v03]",
 			 "",
 			 NULL };
 
-char* MENU_ITEMS[] = { "reboot system now",
+char* MENU_ITEMS[] = { "reboot options",
                        "install zip from sdcard",
                        "apply /sdcard/update.zip",
                        "factory reset",

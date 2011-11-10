@@ -861,7 +861,9 @@ void show_nandroid_menu()
     {
         case 0:
             {
-                char backup_path[PATH_MAX];
+		if (confirm_selection("Confirm BACKUP?", "Yes - Start Backup NOW!"))
+		{                
+		char backup_path[PATH_MAX];
                 time_t t = time(NULL);
                 struct tm *tmp = localtime(&t);
                 if (tmp == NULL)
@@ -875,6 +877,7 @@ void show_nandroid_menu()
                     strftime(backup_path, sizeof(backup_path), "/sdcard/clockworkmod/backup/%F.%H.%M.%S", tmp);
                 }
                 nandroid_backup(backup_path);
+		}
             }
             break;
         case 1:
