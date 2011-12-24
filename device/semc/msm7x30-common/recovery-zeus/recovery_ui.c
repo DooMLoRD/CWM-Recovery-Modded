@@ -21,7 +21,7 @@
 #include "extendedcommands.h"
 
 //char* MENU_HEADERS[] = { NULL };
-char* MENU_HEADERS[] = { "Xperia Play [v03]",
+char* MENU_HEADERS[] = { "Xperia Play [v03] {ICS}",
 			 "",
 			 NULL };
 
